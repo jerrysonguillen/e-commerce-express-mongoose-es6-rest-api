@@ -1,0 +1,62 @@
+http://localhost:8080/api/v1
+
+###
+
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "Rick",
+    "lastName": "Andres",
+    "address": "Tondo",
+    "country": "Philippines",
+    "phone": "0966542212",
+    "role": "member",
+    "email": "rick@gmail.com",
+    "password": "samplepass"
+}
+
+###
+
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "password"
+}
+
+
+###
+
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "rick@gmail.com",
+    "password": "samplepass"
+}
+
+
+###
+
+#admin
+http://localhost:8080/api/v1/auth/users
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2tAZ21haWwuY29tIiwidXNlcklkIjoiNWY5NmZkYmFjYjI3YmYwNzNjZmQxYWY2Iiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTYwNDA3ODI4NiwiZXhwIjoxNjA0NDM4Mjg2fQ.i3OgX-aUkQKSW1NpdBGYX9ABeYZOYyI9EMuE-mc90nM
+
+###
+
+#member
+
+http://localhost:8080/api/v1/auth/users
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOTZmZDM4Y2IyN2JmMDczY2ZkMWFmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwMzkwMzcwNCwiZXhwIjoxNjA0MjYzNzA0fQ.knw4j7dqCi6Uv70bMRmEKY2IrJ5hMvt6GevfW2IRcQ0
+
+
+#id admin 5f96fd38cb27bf073cfd1af5
+#id member 5f96fdbacb27bf073cfd1af6
+
+###
+
+
+http://localhost:8080/api/v1/auth/users/5f96fdbacb27bf073cfd1af6
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2tAZ21haWwuY29tIiwidXNlcklkIjoiNWY5NmZkYmFjYjI3YmYwNzNjZmQxYWY2Iiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTYwNDA3ODI4NiwiZXhwIjoxNjA0NDM4Mjg2fQ.i3OgX-aUkQKSW1NpdBGYX9ABeYZOYyI9EMuE-mc90nM

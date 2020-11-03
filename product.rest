@@ -1,0 +1,72 @@
+http://localhost:8080/api/product
+
+#admin
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "password"
+}
+
+#member
+###
+POST http://localhost:8080/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "rick@gmail.com",
+    "password": "samplepass"
+}
+
+//add product
+###
+POST http://localhost:8080/api/product/
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOTZmZDM4Y2IyN2JmMDczY2ZkMWFmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA3OTU0MiwiZXhwIjoxNjA0NDM5NTQyfQ.EY23JIBN5F6r8vOjcPJ8xgATsyMsodupk8iPX8CLCgA
+
+{
+      "name":"Addidas" ,
+      "detail":"very expensive shoes",
+      "category":"shoes",
+      "price":19000.00,
+      "qty":500
+}
+
+#id admin 5f96fd38cb27bf073cfd1af5
+#id member 5f96fdbacb27bf073cfd1af6
+
+//all product
+###
+http://localhost:8080/api/product/all
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2tAZ21haWwuY29tIiwidXNlcklkIjoiNWY5NmZkYmFjYjI3YmYwNzNjZmQxYWY2Iiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTYwNDEzMTI1MiwiZXhwIjoxNjA0NDkxMjUyfQ.2-08NhJNWWmk4S8Kd77kSXMU0SnnDuN21jW3k8FFZeM
+
+
+//get product
+###
+http://localhost:8080/api/product/5f96fdbacb27bf073cfd1af6
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2tAZ21haWwuY29tIiwidXNlcklkIjoiNWY5NmZkYmFjYjI3YmYwNzNjZmQxYWY2Iiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTYwNDA3ODI4NiwiZXhwIjoxNjA0NDM4Mjg2fQ.i3OgX-aUkQKSW1NpdBGYX9ABeYZOYyI9EMuE-mc90nM
+
+
+//update
+#update
+###
+PUT http://localhost:8080/api/product/5f9c4640ae2f4025c0769be0
+Content-Type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOTZmZDM4Y2IyN2JmMDczY2ZkMWFmNSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA4MDc5NCwiZXhwIjoxNjA0NDQwNzk0fQ.RlveaaL_M47QlZuh-L44Vk6B8ngmml5KDl2KF5Zi8tc
+
+{
+      "name":"updated value" ,
+      "detail":"very expensive shoes",
+      "category":"shoes",
+      "price":19000.00,
+      "qty":500
+}
+
+#delete
+###
+DELETE http://localhost:8080/api/product/5f9c4fe5e2b6c62e78c914ce
+Content-type:application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJpY2tAZ21haWwuY29tIiwidXNlcklkIjoiNWY5NmZkYmFjYjI3YmYwNzNjZmQxYWY2Iiwicm9sZSI6Im1lbWJlciIsImlhdCI6MTYwNDEzMTI1MiwiZXhwIjoxNjA0NDkxMjUyfQ.2-08NhJNWWmk4S8Kd77kSXMU0SnnDuN21jW3k8FFZeM
